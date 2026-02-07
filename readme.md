@@ -71,31 +71,17 @@ The application will be available at `http://localhost:8000`
 
 ## Default Users
 
-After running the seeders, you can login with these default credentials:
+Default users are created during seeding.
 
-- Owner:
+You should set the passwords for these users in your `.env` file before running the seeders using the following variables:
 
-  - Email: owner@resto.com
-  - Password: owner
+- `OWNER_PASSWORD` (for owner@resto.com)
+- `ADMIN_PASSWORD` (for admin@resto.com)
+- `WAITER_PASSWORD` (for waiter@resto.com)
+- `CASHIER_PASSWORD` (for kasir@resto.com)
+- `CUSTOMER_PASSWORD` (for pelanggan@resto.com)
 
-- Administrator:
-
-  - Email: admin@resto.com
-  - Password: admin
-
-- Waiter:
-
-  - Email: waiter@resto.com
-  - Password: waiter
-
-- Cashier:
-
-  - Email: kasir@resto.com
-  - Password: kasir
-
-- Customer:
-  - Email: pelanggan@resto.com
-  - Password: pelanggan
+If these variables are not set, random passwords will be generated and displayed in the console output when you run `php artisan migrate:fresh --seed`.
 
 ## Features
 
