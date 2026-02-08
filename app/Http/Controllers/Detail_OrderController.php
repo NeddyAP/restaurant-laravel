@@ -25,7 +25,7 @@ class Detail_OrderController extends Controller
             'total_harga' => $harga
         ]);
 
-        if($cek = DB::table('tbl_detail_order')->where('tbl_detail_order.id_order', $id_order)->get()->count() == 0){
+        if(DB::table('tbl_detail_order')->where('tbl_detail_order.id_order', $id_order)->count() == 0){
             
             $data = 0;
         }
