@@ -1,0 +1,91 @@
+PHPUnit 9.6.21 by Sebastian Bergmann and contributors.
+
+Warning:       Your XML configuration validates against a deprecated schema.
+Suggestion:    Migrate your XML configuration using "--migrate-configuration"!
+
+EEE                                                                 3 / 3 (100%)
+
+Time: 00:00.294, Memory: 28.00 MB
+
+There were 3 errors:
+
+1) Tests\Feature\UserCreationTest::test_vulnerability_missing_validation
+Illuminate\Encryption\MissingAppKeyException: No application encryption key has been specified.
+
+/app/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:101
+/app/vendor/laravel/framework/src/Illuminate/Support/helpers.php:263
+/app/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:99
+/app/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:82
+/app/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:34
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:873
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:758
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:853
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:694
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:838
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:1027
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:947
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:908
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:758
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:853
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:694
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:838
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:206
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:180
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:513
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:322
+/app/tests/Feature/UserCreationTest.php:42
+
+2) Tests\Feature\UserCreationTest::test_vulnerability_duplicate_email
+Illuminate\Encryption\MissingAppKeyException: No application encryption key has been specified.
+
+/app/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:101
+/app/vendor/laravel/framework/src/Illuminate/Support/helpers.php:263
+/app/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:99
+/app/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:82
+/app/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:34
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:873
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:758
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:853
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:694
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:838
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:1027
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:947
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:908
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:758
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:853
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:694
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:838
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:206
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:180
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:513
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:322
+/app/tests/Feature/UserCreationTest.php:79
+
+3) Tests\Feature\UserCreationTest::test_successful_user_creation
+Illuminate\Encryption\MissingAppKeyException: No application encryption key has been specified.
+
+/app/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:101
+/app/vendor/laravel/framework/src/Illuminate/Support/helpers.php:263
+/app/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:99
+/app/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:82
+/app/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:34
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:873
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:758
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:853
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:694
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:838
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:1027
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:947
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:908
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:758
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:853
+/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:694
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:838
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:206
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:180
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:513
+/app/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:322
+/app/tests/Feature/UserCreationTest.php:102
+
+ERRORS!
+Tests: 3, Assertions: 0, Errors: 3.
