@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Masakan;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class MasakanController extends Controller
 {
@@ -25,7 +26,7 @@ class MasakanController extends Controller
         DB::table('tbl_masakans')->insert([
             'gambar_masakan' => 'default.jpg',
             'nama_masakan' => $request->nama_masakan,
-            'harga' => 'Rp.' + $request->harga,
+            'harga' => 'Rp.' . $request->harga,
             'status_masakan' => $request->status_masakan,
             'created_at' => now(),
         ]);
@@ -43,20 +44,24 @@ class MasakanController extends Controller
     {
         if ($request->hasFile('gambar_masakan')) {
 
+        $request->validate([
+            'gambar_masakan' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
         $file = $request->file('gambar_masakan');
-        $namaFile = $file->getClientOriginalName();
+        $namaFile = $file->hashName();
         $file->move(public_path('assets/img/masakan/'), $namaFile);
         DB::table('tbl_masakans')->where('id_masakan', $request->id_masakan)->update([
             'gambar_masakan' => $namaFile,
             'nama_masakan' => $request->nama_masakan,
-            'harga' => 'Rp.' + $request->harga,
+            'harga' => 'Rp.' . $request->harga,
             'status_masakan' => $request->status_masakan
         ]);
         }
         else{
             DB::table('tbl_masakans')->where('id_masakan', $request->id_masakan)->update([
                 'nama_masakan' => $request->nama_masakan,
-                'harga' => 'Rp.' + $request->harga,
+                'harga' => 'Rp.' . $request->harga,
                 'status_masakan' => $request->status_masakan
             ]);
         }
