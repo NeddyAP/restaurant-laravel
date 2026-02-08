@@ -36,6 +36,13 @@ class UserController extends Controller
 
     public function tambah(Request $request)
     {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'id_level' => 'required|integer|exists:tbl_levels,id_level',
+            'password' => 'required|string|min:8',
+        ]);
+
         DB::table('users')->insert([
             'name' => $request->name,
             'email' => $request->email,

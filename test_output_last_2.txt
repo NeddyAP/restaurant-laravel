@@ -1,0 +1,10 @@
+PHPUnit 9.6.21 by Sebastian Bergmann and contributors.
+
+Warning:       Your XML configuration validates against a deprecated schema.
+Suggestion:    Migrate your XML configuration using "--migrate-configuration"!
+
+...                                                                 3 / 3 (100%)
+
+Time: 00:00.241, Memory: 28.00 MB
+
+OK (3 tests, 11 assertions)
