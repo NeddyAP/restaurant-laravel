@@ -35,7 +35,7 @@ class LevelController extends Controller
     {
         DB::table('tbl_levels')->where('id_level', $id_level)->delete();
 
-        return redirect('/masakan')->with('danger', 'Data berhasil dihapus.');
+        return redirect('/level')->with('danger', 'Data berhasil dihapus.');
     }
     public function edit(Request $request)
     {
