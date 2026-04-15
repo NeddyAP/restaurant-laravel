@@ -4,7 +4,7 @@ A Laravel-based restaurant management system that helps manage orders, menus, an
 
 ## Requirements
 
-- PHP >= 7.4
+- PHP >= 8.2
 - MySQL >= 5.7
 - Composer
 - Node.js & NPM
@@ -68,6 +68,26 @@ php artisan serve
 ```
 
 The application will be available at `http://localhost:8000`
+
+## Laravel Boost (MCP + Guidelines)
+
+This project is configured for Laravel Boost.
+
+After dependencies are installed, run the installer locally:
+
+```bash
+php artisan boost:install
+```
+
+Select:
+- AI Guidelines
+- Agent Skills
+- Boost MCP Server Configuration
+
+For Copilot, this installs:
+- Project guidelines in `AGENTS.md`
+- Agent skills in `.github/skills/`
+- MCP server config in `.vscode/mcp.json`
 
 ## Default Users
 

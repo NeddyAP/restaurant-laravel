@@ -25,13 +25,9 @@ class Detail_OrderController extends Controller
             'total_harga' => $harga
         ]);
 
-        if(DB::table('tbl_detail_order')->where('tbl_detail_order.id_order', $id_order)->count() == 0){
-            
+        if (DB::table('tbl_detail_order')->where('tbl_detail_order.id_order', $id_order)->count() == 0) {
             $data = 0;
-        }
-
-        else{
-            
+        } else {
             $data = 1;
         }
         return view('order.detail_order.index', compact('detail_orders', 'masakans', 'id_order', 'data', 'no_meja'))
@@ -50,10 +46,9 @@ class Detail_OrderController extends Controller
             'status_detail_order' => $request->status_detail_order,
             'created_at' => now()
         ]);
-        return redirect()->action(
-            'Detail_OrderController@index', ['id_order' => $id_order]
-        )
-        ->with('success', 'Data berhasil dibuat.');
+        return redirect()
+            ->route('detail_order', ['id_order' => $id_order])
+            ->with('success', 'Data berhasil dibuat.');
         // return view('/order/detail/')->with('success', 'Data berhasil dibuat.');
     }
 
@@ -62,10 +57,9 @@ class Detail_OrderController extends Controller
         DB::table('tbl_detail_order')->where('id_detail_order', $id_detail_order)->delete();
         
         
-        return redirect()->action(
-            'Detail_OrderController@index', ['id_order' => $id_order]
-        )
-        ->with('danger', 'Data berhasil dihapus.');
+        return redirect()
+            ->route('detail_order', ['id_order' => $id_order])
+            ->with('danger', 'Data berhasil dihapus.');
         // return redirect('/order/detail/')->with('danger', 'Data berhasil dihapus.');
     }
     public function edit(Request $request,$id_order)
@@ -77,10 +71,9 @@ class Detail_OrderController extends Controller
         ]);
 
 
-        return redirect()->action(
-            'Detail_OrderController@index', ['id_order' => $id_order]
-        )
-        ->with('danger', 'Data berhasil dihapus.');
+        return redirect()
+            ->route('detail_order', ['id_order' => $id_order])
+            ->with('warning', 'Data berhasil diupdate.');
 
         // return redirect('/order')->with('warning', 'Data berhasil diupdate.');
     }

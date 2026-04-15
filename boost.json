@@ -1,0 +1,16 @@
+{
+    "agents": [
+        "copilot"
+    ],
+    "guidelines": true,
+    "mcp": true,
+    "nightwatch_mcp": false,
+    "packages": [
+        "spatie/boost-spatie-guidelines"
+    ],
+    "sail": false,
+    "skills": [
+        "laravel-best-practices",
+        "spatie-laravel-php-standards"
+    ]
+}
